@@ -148,6 +148,7 @@ return [
         'date_of_birth'            => 'date of birth',
         'day'                      => '天',
         'deleted_at'               => 'deleted at',
+        'department'               => '工作單位 / 學校',
         'description'              => '描述',
         'district'                 => 'district',
         'duration'                 => 'duration',

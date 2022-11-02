@@ -13,14 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('camps', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('department')->nullable();
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('school');
+            $table->string('department');
+            $table->date('start');
+            $table->date('end');
+            $table->date('apply_end');
+            $table->integer('price');
+            $table->string('url')->nullable();
+            $table->foreignId('approved_by')->nullable();
+            $table->dateTime('approved_at')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('camps');
     }
 };
