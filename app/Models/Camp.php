@@ -31,7 +31,7 @@ class Camp extends Model {
      */
     public function approve(User $by) {
         $this->approved_by = $by->id;
-        $this->approve_at = Carbon::now();
+        $this->approved_at = Carbon::now();
         $this->save();
     }
 }
