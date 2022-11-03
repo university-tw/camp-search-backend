@@ -15,19 +15,20 @@ class CampSeeder extends Seeder {
      */
     public function run() {
         foreach (array_reverse(json_decode(file_get_contents(resource_path('data-1102.json')))) as $item) {
-            $camp = new Camp();
-            $camp->name = $item->name;
-            $camp->school = $item->school;
-            $camp->department = $item->department;
-            $camp->start = $item->start;
-            $camp->end = $item->end;
-            $camp->apply_end = $item->apply_end;
-            $camp->price = $item->price;
-            $camp->url = $item->url;
+            $sys = User::find(1);
 
-            $camp->approve(User::find(1));
+            $camp = $sys->camps()->create([
+                'name' => $item->name,
+                'school' => $item->school,
+                'department' => $item->department,
+                'start' => $item->start,
+                'end' => $item->end,
+                'apply_end' => $item->apply_end,
+                'price' => $item->price,
+                'url' => $item->url
+            ]);
 
-            $camp->save();
+            $sys->approveCamp($camp);
         }
     }
 }

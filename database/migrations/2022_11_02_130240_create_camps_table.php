@@ -26,6 +26,8 @@ return new class extends Migration
             $table->foreignId('approved_by')->nullable();
             $table->dateTime('approved_at')->nullable();
 
+            $table->foreignId('created_by')->nullable();
+
             $table->boolean('recommend')->default(false);
             $table->integer('priority')->default(0);
             $table->json('tags')->nullable();

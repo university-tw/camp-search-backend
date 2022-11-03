@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -41,4 +42,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * 准許營隊
+     */
+    public function approveCamp(Camp $camp) {
+        $camp->approved_by = $this->id;
+        $camp->approved_at = Carbon::now();
+        $camp->save();
+    }
+
+    public function camps() {
+        return $this->hasMany(Camp::class, 'created_by');
+    }
 }

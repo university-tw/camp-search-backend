@@ -21,6 +21,8 @@ class Camp extends Model {
         'approved_at',
         'approved_by',
 
+        'created_by',
+
         'priority',
         'recommend',
         'tags'
@@ -35,12 +37,7 @@ class Camp extends Model {
         'tags' => 'json'
     ];
 
-    /**
-     * 准許營隊
-     */
-    public function approve(User $by) {
-        $this->approved_by = $by->id;
-        $this->approved_at = Carbon::now();
-        $this->save();
+    public function owner() {
+        return $this->belongsTo(User::class, 'created_by');
     }
 }
