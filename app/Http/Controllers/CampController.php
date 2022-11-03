@@ -74,7 +74,7 @@ class CampController extends Controller {
     }
 
     /**
-    * remove a camp from user's favorite list
+     * remove a camp from user's favorite list
      */
     public function removeFavorite(Request $request, Camp $camp) {
         $user = $request->user();
