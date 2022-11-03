@@ -20,5 +20,10 @@ class UserSeeder extends Seeder
             'email' => 'sys@sys.local',
             'password' => bcrypt(\Str::random(32))
         ]);
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@admin.com',
+            'password' => bcrypt("password")
+        ]);
     }
 }
