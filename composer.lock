@@ -4,8 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2726086ce9fb945db4b610cb609e5fa5",
+    "content-hash": "c03c0273c82afc22b61c7c94273f4ccc",
     "packages": [
+        {
+            "name": "blendbyte/nova-items-field",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blendbyte/nova-items-field.git",
+                "reference": "49b17616544bae257604abad7ef1318da6daa5ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blendbyte/nova-items-field/zipball/49b17616544bae257604abad7ef1318da6daa5ec",
+                "reference": "49b17616544bae257604abad7ef1318da6daa5ec",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "^4.0",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NovaItemsField\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NovaItemsField\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Nova field to handle array columns",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "source": "https://github.com/blendbyte/nova-items-field/tree/1.0.0"
+            },
+            "time": "2022-04-12T03:35:52+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.10.2",

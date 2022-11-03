@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use NovaItemsField\Items;
 
 class Camp extends Resource
 {
@@ -49,6 +50,7 @@ class Camp extends Resource
             ID::make()->sortable(),
             Text::make('營隊', 'name'),
 
+            Items::make('標籤', 'tags'),
 
             BelongsTo::make('建立者', 'owner', User::class),
         ];
