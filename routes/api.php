@@ -18,4 +18,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('camps', 'App\Http\Controllers\CampController');
+Route::get('/camps/favorite', [\App\Http\Controllers\CampController::class, 'listFavorite']);
+Route::post('/camps/{camp}/favorite', [\App\Http\Controllers\CampController::class, 'addFavorite']);
+Route::delete('/camps/{camp}/favorite', [\App\Http\Controllers\CampController::class, 'removeFavorite']);
+Route::apiResource('camps', \App\Http\Controllers\CampController::class);

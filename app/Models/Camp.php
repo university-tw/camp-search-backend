@@ -40,4 +40,8 @@ class Camp extends Model {
     public function owner() {
         return $this->belongsTo(User::class, 'created_by');
     }
+
+    public function favorited_by() {
+        return $this->belongsToMany(User::class, 'user_favorite_camps');
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
+use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
@@ -65,6 +66,7 @@ class User extends Resource {
                 ->updateRules('nullable', Rules\Password::defaults()),
 
             HasMany::make('營隊', 'camps', Camp::class),
+            BelongsToMany::make('喜歡的營隊', 'favoriteCamps', Camp::class),
         ];
     }
 

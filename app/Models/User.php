@@ -4,6 +4,8 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
@@ -52,7 +54,11 @@ class User extends Authenticatable
         $camp->save();
     }
 
-    public function camps() {
+    public function camps(): HasMany {
         return $this->hasMany(Camp::class, 'created_by');
+    }
+
+    public function favoriteCamps(): BelongsToMany {
+        return $this->belongsToMany(Camp::class, 'user_favorite_camps');
     }
 }
