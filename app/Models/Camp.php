@@ -18,12 +18,21 @@ class Camp extends Model {
         'apply_end',
         'price',
         'url',
+        'approved_at',
+        'approved_by',
+
+        'priority',
+        'recommend',
+        'tags'
     ];
 
     protected $casts = [
         'start' => 'date',
         'end' => 'date',
         'apply_end' => 'date',
+        'approved_at' => 'datetime',
+        'recommend' => 'boolean',
+        'tags' => 'json'
     ];
 
     /**

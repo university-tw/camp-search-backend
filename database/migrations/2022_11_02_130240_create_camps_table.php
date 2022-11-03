@@ -25,6 +25,11 @@ return new class extends Migration
             $table->string('url')->nullable();
             $table->foreignId('approved_by')->nullable();
             $table->dateTime('approved_at')->nullable();
+
+            $table->boolean('recommend')->default(false);
+            $table->integer('priority')->default(0);
+            $table->json('tags')->nullable();
+
             $table->timestamps();
         });
     }
