@@ -81,6 +81,12 @@
             "url": "https://nova.laravel.com"
         }
     ],
+    "http-basic": {
+        "nova.laravel.com": {
+            "username": "tech@web-id.fr",
+            "password": "QAgBOcSr62pFe0OfKoY8tfVYUCb3t5KVlhGKew7K"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
