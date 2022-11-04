@@ -30,5 +30,23 @@ class CampSeeder extends Seeder {
 
             $sys->approveCamp($camp);
         }
+        foreach (array_reverse(json_decode(file_get_contents(resource_path('data-university.tw.json')))) as $item) {
+            $sys = User::find(1);
+
+            $camp = $sys->camps()->create([
+                'name' => $item->name,
+                'school' => $item->school,
+                'department' => $item->department,
+                'start' => $item->start,
+                'end' => $item->end,
+                'apply_end' => $item->apply_end,
+                'price' => $item->price,
+                'url' => $item->url,
+                'recommend' => true,
+                'priority' => 101
+            ]);
+
+            $sys->approveCamp($camp);
+        }
     }
 }

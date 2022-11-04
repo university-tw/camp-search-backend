@@ -9,10 +9,10 @@ class CampController extends Controller {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Camp[]
      */
     public function index() {
-        return Camp::whereNotNull('approved_at')->whereNotNull('approved_by')->get();
+        return Camp::whereNotNull('approved_at')->whereNotNull('approved_by')->orderByDesc('priority')->get();
     }
 
     /**

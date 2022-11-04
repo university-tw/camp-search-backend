@@ -4,7 +4,9 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use NovaItemsField\Items;
@@ -50,6 +52,8 @@ class Camp extends Resource
             ID::make()->sortable(),
             Text::make('營隊', 'name'),
 
+            Number::make('順序', 'priority')->min(0)->max(100)->step(1),
+            Boolean::make('推薦', 'recommend'),
             Items::make('標籤', 'tags'),
 
             BelongsTo::make('建立者', 'owner', User::class),
