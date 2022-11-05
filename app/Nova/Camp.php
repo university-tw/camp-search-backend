@@ -73,6 +73,7 @@ class Camp extends Resource {
                     1 => '通過',
                     2 => '拒絕',
                 ])
+                ->hideFromDetail()
                 ->hideFromIndex(),
 
             BelongsTo::make('建立者', 'owner', User::class),
