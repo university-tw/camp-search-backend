@@ -57,20 +57,16 @@ class Camp extends Resource {
             Items::make('標籤', 'tags'),
 
             Status::make('審核狀態', 'status')
-                ->loadingWhen([0])
-                ->failedWhen([2])
                 ->displayUsing(function ($item) {
-                    switch ($item) {
-                        case 0:
-                            return '審核中';
-                        case 1:
-                            return '已通過';
-                        case 2:
-                            return '未通過';
-                        default:
-                            return '未知';
-                    }
-                }),
+                    return match ($item) {
+                        0 => '審核中',
+                        1 => '已通過',
+                        2 => '未通過',
+                        default => '未知',
+                    };
+                })
+                ->loadingWhen([0, '審核中'])
+                ->failedWhen([2, '未通過']),
             Select::make('審核狀態', 'status')
                 ->options([
                     0 => '待審核',
