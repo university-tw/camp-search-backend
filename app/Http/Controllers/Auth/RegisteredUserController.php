@@ -10,18 +10,16 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
-class RegisteredUserController extends Controller
-{
+class RegisteredUserController extends Controller {
     /**
      * Handle an incoming registration request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\JsonResponse
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -40,6 +38,9 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return response()->noContent();
+        return response()->json([
+            'message' => 'Authenticated',
+            'token' => $user->createToken('auth_token')->plainTextToken
+        ]);
     }
 }
