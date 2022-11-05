@@ -58,7 +58,19 @@ class Camp extends Resource {
 
             Status::make('審核狀態', 'status')
                 ->loadingWhen([0])
-                ->failedWhen([2]),
+                ->failedWhen([2])
+                ->displayUsing(function ($item) {
+                    switch ($item) {
+                        case 0:
+                            return '審核中';
+                        case 1:
+                            return '已通過';
+                        case 2:
+                            return '未通過';
+                        default:
+                            return '未知';
+                    }
+                }),
             Select::make('審核狀態', 'status')
                 ->options([
                     0 => '待審核',
