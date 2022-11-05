@@ -7,13 +7,13 @@ use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use NovaItemsField\Items;
 
-class Camp extends Resource
-{
+class Camp extends Resource {
     /**
      * The model the resource corresponds to.
      *
@@ -44,11 +44,10 @@ class Camp extends Resource
     /**
      * Get the fields displayed by the resource.
      *
-     * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     * @param \Laravel\Nova\Http\Requests\NovaRequest $request
      * @return array
      */
-    public function fields(NovaRequest $request)
-    {
+    public function fields(NovaRequest $request) {
         return [
             ID::make()->sortable(),
             Text::make('營隊', 'name'),
@@ -60,6 +59,13 @@ class Camp extends Resource
             Status::make('審核狀態', 'status')
                 ->loadingWhen([0])
                 ->failedWhen([2]),
+            Select::make('審核狀態', 'status')
+                ->options([
+                    0 => '待審核',
+                    1 => '通過',
+                    2 => '拒絕',
+                ])
+                ->hideFromIndex(),
 
             BelongsTo::make('建立者', 'owner', User::class),
         ];
@@ -68,44 +74,40 @@ class Camp extends Resource
     /**
      * Get the cards available for the request.
      *
-     * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     * @param \Laravel\Nova\Http\Requests\NovaRequest $request
      * @return array
      */
-    public function cards(NovaRequest $request)
-    {
+    public function cards(NovaRequest $request) {
         return [];
     }
 
     /**
      * Get the filters available for the resource.
      *
-     * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     * @param \Laravel\Nova\Http\Requests\NovaRequest $request
      * @return array
      */
-    public function filters(NovaRequest $request)
-    {
+    public function filters(NovaRequest $request) {
         return [];
     }
 
     /**
      * Get the lenses available for the resource.
      *
-     * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     * @param \Laravel\Nova\Http\Requests\NovaRequest $request
      * @return array
      */
-    public function lenses(NovaRequest $request)
-    {
+    public function lenses(NovaRequest $request) {
         return [];
     }
 
     /**
      * Get the actions available for the resource.
      *
-     * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     * @param \Laravel\Nova\Http\Requests\NovaRequest $request
      * @return array
      */
-    public function actions(NovaRequest $request)
-    {
+    public function actions(NovaRequest $request) {
         return [];
     }
 }
