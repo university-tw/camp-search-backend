@@ -41,6 +41,10 @@ class Camp extends Model {
         'tags' => 'json'
     ];
 
+    public function getApprovedAttribute() {
+        return $this->approved_at !== null;
+    }
+
     public function owner() {
         return $this->belongsTo(User::class, 'created_by');
     }

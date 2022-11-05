@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use NovaItemsField\Items;
@@ -55,6 +56,10 @@ class Camp extends Resource
             Number::make('順序', 'priority')->min(0)->max(100)->step(1),
             Boolean::make('推薦', 'recommend'),
             Items::make('標籤', 'tags'),
+
+            Status::make('審核通過', 'approved')
+                ->loadingWhen([false])
+                ->failedWhen([true]),
 
             BelongsTo::make('建立者', 'owner', User::class),
         ];
