@@ -3,6 +3,8 @@
 namespace App\Observers;
 
 use App\Models\Camp;
+use Illuminate\Support\Facades\Request;
+use Log;
 
 class CampObserver {
     /**
@@ -23,8 +25,9 @@ class CampObserver {
      */
     public function updating(Camp $camp) {
         if($camp->isDirty('status')) {
-            $id = auth()->id();
-            \Log::alert("[Audit] Camp {$camp->id} status changed from {$camp->getOriginal()['status']} to {$camp->status} by {$id}");
+            $user = auth()->user();
+            $ip = Request::ip();
+            Log::alert("[Audit] Camp {$camp->id} status changed from {$camp->getOriginal()['status']} to {$camp->status} (uid: {$user->id}[{$user->name}]) ip: {$ip}");
         }
     }
 
