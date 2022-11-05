@@ -12,10 +12,12 @@ class Camp extends Model {
     protected $fillable = [
         'name',
         'school',
+        'description',
         'department',
         'start',
         'end',
         'apply_end',
+        'apply_notice',
         'price',
         'url',
         'approved_at',
@@ -25,7 +27,9 @@ class Camp extends Model {
 
         'priority',
         'recommend',
-        'tags'
+        'tags',
+
+        'comment'
     ];
 
     protected $casts = [

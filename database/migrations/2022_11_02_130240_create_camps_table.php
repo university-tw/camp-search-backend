@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('camps', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->text('description')->nullable();
+            $table->text('apply_notice')->nullable();
             $table->string('school');
             $table->string('department');
             $table->date('start');
@@ -31,6 +33,8 @@ return new class extends Migration
             $table->boolean('recommend')->default(false);
             $table->integer('priority')->default(0);
             $table->json('tags')->nullable();
+
+            $table->text('comment')->nullable();
 
             $table->timestamps();
         });
