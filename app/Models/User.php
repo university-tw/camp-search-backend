@@ -45,15 +45,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * 准許營隊
-     */
-    public function approveCamp(Camp $camp) {
-        $camp->approved_by = $this->id;
-        $camp->approved_at = Carbon::now();
-        $camp->save();
-    }
-
     public function camps(): HasMany {
         return $this->hasMany(Camp::class, 'created_by');
     }

@@ -25,8 +25,8 @@ return new class extends Migration
             $table->date('apply_end');
             $table->integer('price');
             $table->string('url')->nullable();
-            $table->foreignId('approved_by')->nullable();
-            $table->dateTime('approved_at')->nullable();
+
+            $table->integer('status')->default(0);
 
             $table->foreignId('created_by')->nullable();
 

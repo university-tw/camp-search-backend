@@ -12,7 +12,12 @@ class CampController extends Controller {
      * @return Camp[]
      */
     public function index() {
-        return Camp::whereNotNull('approved_at')->whereNotNull('approved_by')->orderByDesc('priority')->get();
+        // status:
+        // 0: pending
+        // 1: approved
+        // 2: rejected
+
+        return Camp::whereStatus(1)->orderByDesc('priority')->get();
     }
 
     /**

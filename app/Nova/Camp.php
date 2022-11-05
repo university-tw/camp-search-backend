@@ -57,9 +57,9 @@ class Camp extends Resource
             Boolean::make('推薦', 'recommend'),
             Items::make('標籤', 'tags'),
 
-            Status::make('審核通過', 'approved')
-                ->loadingWhen([false])
-                ->failedWhen([true]),
+            Status::make('審核狀態', 'status')
+                ->loadingWhen([0])
+                ->failedWhen([2]),
 
             BelongsTo::make('建立者', 'owner', User::class),
         ];

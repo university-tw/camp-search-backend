@@ -20,8 +20,8 @@ class Camp extends Model {
         'apply_notice',
         'price',
         'url',
-        'approved_at',
-        'approved_by',
+
+        'status',
 
         'created_by',
 
@@ -40,10 +40,6 @@ class Camp extends Model {
         'recommend' => 'boolean',
         'tags' => 'json'
     ];
-
-    public function getApprovedAttribute() {
-        return $this->approved_at !== null;
-    }
 
     public function owner() {
         return $this->belongsTo(User::class, 'created_by');

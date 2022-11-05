@@ -16,7 +16,7 @@ class NewCampController extends Controller {
 
     public function approveStatus(Camp $camp) {
         return response()->json([
-            'status' => $camp->approved_at !== null
+            'status' => $camp->status
         ]);
     }
 }
