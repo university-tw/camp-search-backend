@@ -57,7 +57,7 @@ class Camp extends Resource {
             Items::make('標籤', 'tags'),
 
             Status::make('審核狀態', 'status')
-                ->displayUsing(function ($item) {
+                ->resolveUsing(function ($item) {
                     return match ($item) {
                         0 => '審核中',
                         1 => '已通過',
