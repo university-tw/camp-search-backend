@@ -24,7 +24,7 @@ class CampObserver {
     public function updating(Camp $camp) {
         if($camp->isDirty('status')) {
             $id = auth()->id();
-            \Log::alert("[Audit] Camp {$camp->id} status changed to {$camp->status} by {$id}");
+            \Log::alert("[Audit] Camp {$camp->id} status changed from {$camp->getOriginal()['status']} to {$camp->status} by {$id}");
         }
     }
 
