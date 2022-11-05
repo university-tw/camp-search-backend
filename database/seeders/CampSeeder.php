@@ -45,8 +45,6 @@ class CampSeeder extends Seeder {
                 'priority' => 101,
                 'status' => 1
             ]);
-
-            $sys->approveCamp($camp);
         }
     }
 }
