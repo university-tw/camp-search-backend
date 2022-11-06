@@ -10,6 +10,7 @@ use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use NovaItemsField\Items;
 
@@ -74,6 +75,8 @@ class Camp extends Resource {
                     2 => '拒絕',
                 ])
                 ->hideFromDetail()
+                ->hideFromIndex(),
+            Textarea::make('審核意見', 'comment')
                 ->hideFromIndex(),
 
             BelongsTo::make('建立者', 'owner', User::class),

@@ -215,4 +215,7 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'vercel' => [
+        'token' => env('VERCEL_SECRET_TOKEN'),
+    ],
 ];

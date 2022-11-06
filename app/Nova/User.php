@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Validation\Rules;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Gravatar;
@@ -11,8 +12,11 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Resource {
+    use Notifiable, HasApiTokens;
+
     /**
      * The model the resource corresponds to.
      *

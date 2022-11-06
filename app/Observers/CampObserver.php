@@ -3,6 +3,8 @@
 namespace App\Observers;
 
 use App\Models\Camp;
+use App\Notifications\CampStatusChange;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Request;
 use Log;
 
@@ -24,10 +26,14 @@ class CampObserver {
      * @return void
      */
     public function updating(Camp $camp) {
-        if($camp->isDirty('status')) {
+        if ($camp->isDirty('status')) {
+            $token = config('app.vercel.token');
+            Http::get("https://camp.university.tw/api/revalidate?id={$camp->id}&token={$token}");
             $user = auth()->user();
             $ip = Request::ip();
             Log::alert("[Audit] Camp {$camp->id} status changed from {$camp->getOriginal()['status']} to {$camp->status} (uid: {$user->id}[{$user->name}]) ip: {$ip}");
+
+            $camp->owner->notify(new CampStatusChange($camp));
         }
     }
 
