@@ -1,222 +1,263 @@
 [
-  {
-    "id": "20",
-    "name": "這個科系很不一樣-科系「微」探索",
-    "school": "成功大學",
-    "department": "能源產業人才教育中心",
-    "start": "2022-01-16",
-    "end": "2022-02-08",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/photo?fbid=566490008616137&set=a.517984666800005"
-  },
-  {
-    "id": "19",
-    "name": "第25屆國立成功大學工程科學研習營",
-    "school": "成功大學",
-    "department": "工程科學系系學會",
-    "start": "2022-02-01",
-    "end": "2022-02-05",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/24ESC.escaping"
-  },
-  {
-    "id": "18",
-    "name": "第十四屆成大經濟營【經濟遊樂園】",
-    "school": "成功大學",
-    "department": "經濟系",
-    "start": "2022-02-03",
-    "end": "2022-02-06",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/nckueconcamp"
-  },
-  {
-    "id": "17",
-    "name": "2023成大寒假空間資訊營",
-    "school": "成功大學",
-    "department": "測量及空間資訊學系",
-    "start": "2022-02-03",
-    "end": "2022-02-06",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/nckugcamp"
-  },
-  {
-    "id": "16",
-    "name": "國家領導研習營",
-    "school": "成功大學",
-    "department": "政治學系",
-    "start": "2022-02-02",
-    "end": "2022-02-06",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/ncku.ps.csl"
-  },
-  {
-    "id": "15",
-    "name": "第十五屆成大都計營",
-    "school": "成功大學",
-    "department": "都市計劃學系",
-    "start": "2022-02-02",
-    "end": "2022-02-06",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/15thupcamp"
-  },
-  {
-    "id": "14",
-    "name": "CYC11 雲嘉成大生活體驗營",
-    "school": "成功大學",
-    "department": "雲林嘉義地區校友會",
-    "start": "2022-02-03",
-    "end": "2022-02-06",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/nckucyc10wintercamp"
-  },
-  {
-    "id": "13",
-    "name": "2023成大工設營—原廠設定",
-    "school": "成功大學",
-    "department": "工設系",
-    "start": "2022-01-31",
-    "end": "2022-02-04",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/NCKUIDcamp"
-  },
-  {
-    "id": "12",
-    "name": "2023跨領域機電系統整合營",
-    "school": "成功大學",
-    "department": "系統與船舶機電工程學系系學會",
-    "start": "2022-02-06",
-    "end": "2022-02-10",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/snamecamp"
-  },
-  {
-    "id": "11",
-    "name": "熱血玩大學-成大科系體驗營CHNC",
-    "school": "成功大學",
-    "department": "成大彰友會",
-    "start": "2022-01-30",
-    "end": "2022-02-05",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/chwintercamp"
-  },
-  {
-    "id": "10",
-    "name": "土木抗震體驗營",
-    "school": "成功大學",
-    "department": "土木工程系學會",
-    "start": "2022-01-16",
-    "end": "2022-01-20",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/profile.php?id=100027924416370"
-  },
-  {
-    "id": "9",
-    "name": "第七屆全球水資源治理人才研習營",
-    "school": "成功大學",
-    "department": "水利及海洋工程學系",
-    "start": "2022-02-02",
-    "end": "2022-02-05",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/hmcsince2016"
-  },
-  {
-    "id": "8",
-    "name": "第25屆工資館跨域體驗營",
-    "school": "成功大學",
-    "department": "工業與資訊管理學系",
-    "start": "2022-02-01",
-    "end": "2022-02-05",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/nckuiimc/?ref=page_internal"
-  },
-  {
-    "id": "7",
-    "name": "第26屆成大企業管理研習營",
-    "school": "成功大學",
-    "department": "企業管理學系",
-    "start": "2022-02-01",
-    "end": "2022-02-05",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/NCKUBAcampOfficial/"
-  },
-  {
-    "id": "6",
-    "name": "2023CPED科系探索營",
-    "school": "成功大學",
-    "department": "成大中友會",
-    "start": "2022-02-01",
-    "end": "2022-02-05",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://www.facebook.com/NCKU.CPED/about"
-  },
-  {
-    "id": "5",
-    "name": "第十六屆成大財金會計研習營",
-    "school": "成功大學",
-    "department": "會計系系學會",
-    "start": "2022-02-01",
-    "end": "2022-02-05",
-    "apply_end": "2022-12-01",
-    "price": 6000,
-    "url": "https://facebook.com/ncku.afcamp"
-  },
-  {
-    "id": "4",
-    "name": "嘉大動科營",
-    "school": "嘉義大學",
-    "department": "動物科學系",
-    "start": "2023-01-29",
-    "end": "2023-02-01",
-    "apply_end": "2022-12-10",
-    "price": 4900,
-    "url": "https://www.instagram.com/ncyu_ascamp/"
-  },
-  {
-    "id": "3",
-    "name": "SIED2023 - 國際經貿暨外交事務研習營",
-    "school": "救國團",
-    "department": "總團部",
-    "start": "2023-01-31",
-    "end": "2023-02-04",
-    "apply_end": "2022-11-25",
-    "price": 5980,
-    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdYWkg8bu31WbF_e-Ke_GwonTVNBxVsoMyOiUncDeqJ0qJWfw/viewform"
-  },
-  {
-    "id": "2",
-    "name": "長庚護理營",
-    "school": "長庚大學",
-    "department": "護理系",
-    "start": "2023-02-06",
-    "end": "2023-02-08",
-    "apply_end": "2022-11-15",
-    "price": 6200,
-    "url": "https://cgunucamp.weebly.com/"
-  },
-  {
-    "id": "1",
-    "name": "台大日文營",
-    "school": "臺灣大學",
-    "department": "日本語文學系",
-    "start": "2023-02-06",
-    "end": "2023-02-09",
-    "apply_end": "2022-11-29",
-    "price": 6200,
-    "url": "https://www.facebook.com/NTUJPcamp/"
-  }
+    {
+        "id": "20",
+        "name": "這個科系很不一樣-科系「微」探索",
+        "school": "成功大學",
+        "department": "能源產業人才教育中心",
+        "start": "2022-01-16",
+        "end": "2022-02-08",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/photo?fbid=566490008616137&set=a.517984666800005",
+        "tags": [
+            "科系探索"
+        ]
+    },
+    {
+        "id": "19",
+        "name": "第25屆國立成功大學工程科學研習營",
+        "school": "成功大學",
+        "department": "工程科學系系學會",
+        "start": "2022-02-01",
+        "end": "2022-02-05",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/24ESC.escaping"
+    },
+    {
+        "id": "18",
+        "name": "第十四屆成大經濟營【經濟遊樂園】",
+        "school": "成功大學",
+        "department": "經濟系",
+        "start": "2022-02-03",
+        "end": "2022-02-06",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/nckueconcamp",
+        "tags": [
+            "社會組",
+            "一類"
+        ]
+    },
+    {
+        "id": "17",
+        "name": "2023成大寒假空間資訊營",
+        "school": "成功大學",
+        "department": "測量及空間資訊學系",
+        "start": "2022-02-03",
+        "end": "2022-02-06",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/nckugcamp"
+    },
+    {
+        "id": "16",
+        "name": "國家領導研習營",
+        "school": "成功大學",
+        "department": "政治學系",
+        "start": "2022-02-02",
+        "end": "2022-02-06",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/ncku.ps.csl",
+        "tags": [
+            "社會組",
+            "一類"
+        ]
+    },
+    {
+        "id": "15",
+        "name": "第十五屆成大都計營",
+        "school": "成功大學",
+        "department": "都市計劃學系",
+        "start": "2022-02-02",
+        "end": "2022-02-06",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/15thupcamp",
+        "tags": [
+            "社會組",
+            "一類"
+        ]
+    },
+    {
+        "id": "14",
+        "name": "CYC11 雲嘉成大生活體驗營",
+        "school": "成功大學",
+        "department": "雲林嘉義地區校友會",
+        "start": "2022-02-03",
+        "end": "2022-02-06",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/nckucyc10wintercamp",
+        "tags": [
+            "科系探索"
+        ]
+    },
+    {
+        "id": "13",
+        "name": "2023成大工設營—原廠設定",
+        "school": "成功大學",
+        "department": "工設系",
+        "start": "2022-01-31",
+        "end": "2022-02-04",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/NCKUIDcamp"
+    },
+    {
+        "id": "12",
+        "name": "2023跨領域機電系統整合營",
+        "school": "成功大學",
+        "department": "系統與船舶機電工程學系系學會",
+        "start": "2022-02-06",
+        "end": "2022-02-10",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/snamecamp"
+    },
+    {
+        "id": "11",
+        "name": "熱血玩大學-成大科系體驗營CHNC",
+        "school": "成功大學",
+        "department": "成大彰友會",
+        "start": "2022-01-30",
+        "end": "2022-02-05",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/chwintercamp",
+        "tags": [
+            "科系探索"
+        ]
+    },
+    {
+        "id": "10",
+        "name": "土木抗震體驗營",
+        "school": "成功大學",
+        "department": "土木工程系學會",
+        "start": "2022-01-16",
+        "end": "2022-01-20",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/profile.php?id=100027924416370"
+    },
+    {
+        "id": "9",
+        "name": "第七屆全球水資源治理人才研習營",
+        "school": "成功大學",
+        "department": "水利及海洋工程學系",
+        "start": "2022-02-02",
+        "end": "2022-02-05",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/hmcsince2016"
+    },
+    {
+        "id": "8",
+        "name": "第25屆工資館跨域體驗營",
+        "school": "成功大學",
+        "department": "工業與資訊管理學系",
+        "start": "2022-02-01",
+        "end": "2022-02-05",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/nckuiimc/?ref=page_internal"
+    },
+    {
+        "id": "7",
+        "name": "第26屆成大企業管理研習營",
+        "school": "成功大學",
+        "department": "企業管理學系",
+        "start": "2022-02-01",
+        "end": "2022-02-05",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/NCKUBAcampOfficial/"
+    },
+    {
+        "id": "6",
+        "name": "2023CPED科系探索營",
+        "school": "成功大學",
+        "department": "成大中友會",
+        "start": "2022-02-01",
+        "end": "2022-02-05",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://www.facebook.com/NCKU.CPED/about"
+    },
+    {
+        "id": "5",
+        "name": "第十六屆成大財金會計研習營",
+        "school": "成功大學",
+        "department": "會計系系學會",
+        "start": "2022-02-01",
+        "end": "2022-02-05",
+        "apply_end": "2022-12-01",
+        "price": 6000,
+        "url": "https://facebook.com/ncku.afcamp",
+        "tags": [
+            "社會組",
+            "一類"
+        ]
+    },
+    {
+        "id": "4",
+        "name": "嘉大動科營",
+        "school": "嘉義大學",
+        "department": "動物科學系",
+        "start": "2023-01-29",
+        "end": "2023-02-01",
+        "apply_end": "2022-12-10",
+        "price": 4900,
+        "url": "https://www.instagram.com/ncyu_ascamp/",
+        "tags": [
+            "三類"
+        ]
+    },
+    {
+        "id": "3",
+        "name": "SIED2023 - 國際經貿暨外交事務研習營",
+        "school": "救國團",
+        "department": "總團部",
+        "start": "2023-01-31",
+        "end": "2023-02-04",
+        "apply_end": "2022-11-25",
+        "price": 5980,
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSdYWkg8bu31WbF_e-Ke_GwonTVNBxVsoMyOiUncDeqJ0qJWfw/viewform",
+        "tags": [
+            "社會組",
+            "一類"
+        ]
+    },
+    {
+        "id": "2",
+        "name": "長庚護理營",
+        "school": "長庚大學",
+        "department": "護理系",
+        "start": "2023-02-06",
+        "end": "2023-02-08",
+        "apply_end": "2022-11-15",
+        "price": 6200,
+        "url": "https://cgunucamp.weebly.com/",
+        "tags": [
+            "醫科",
+            "三類"
+        ]
+    },
+    {
+        "id": "1",
+        "name": "台大日文營",
+        "school": "臺灣大學",
+        "department": "日本語文學系",
+        "start": "2023-02-06",
+        "end": "2023-02-09",
+        "apply_end": "2022-11-29",
+        "price": 6200,
+        "url": "https://www.facebook.com/NTUJPcamp/",
+        "tags": [
+            "社會組",,
+            "一類",
+            "語言"
+        ]
+    }
 ]
