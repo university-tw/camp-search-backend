@@ -24,9 +24,13 @@ class CampSeeder extends Seeder {
                 'start' => $item->start,
                 'end' => $item->end,
                 'apply_end' => $item->apply_end,
-                'price' => $item->price,
                 'url' => $item->url,
                 'status' => 1
+            ]);
+            $camp->offers()->create([
+                'name' => '一般報名',
+                'description' => '',
+                'price' => $item->price,
             ]);
         }
         foreach (array_reverse(json_decode(file_get_contents(resource_path('data-university.tw.json')))) as $item) {
@@ -39,11 +43,15 @@ class CampSeeder extends Seeder {
                 'start' => $item->start,
                 'end' => $item->end,
                 'apply_end' => $item->apply_end,
-                'price' => $item->price,
                 'url' => $item->url,
                 'recommend' => true,
                 'priority' => 101,
                 'status' => 1
+            ]);
+            $camp->offers()->create([
+                'name' => '一般報名',
+                'description' => '',
+                'price' => $item->price,
             ]);
         }
     }

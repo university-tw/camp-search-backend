@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 
 class Camp extends Model {
@@ -47,5 +48,9 @@ class Camp extends Model {
 
     public function favorited_by() {
         return $this->belongsToMany(User::class, 'user_favorite_camps');
+    }
+
+    public function offers(): HasMany {
+        return $this->hasMany(Offer::class);
     }
 }

@@ -28,13 +28,19 @@ class CampRequest extends FormRequest
             'school'=> 'required|string',
             'department'=> 'required|string',
             'description' => 'required|string',
-            'price' => 'required|numeric',
+
             'start' => 'required|date',
             'end' => 'required|date',
             'apply_end' => 'required|date',
             'apply_notice' => 'required|string',
             'url' => 'required|active_url',
             'tags' => 'required|array',
+            'offers' => 'required|array',
+
+            'offers.*.name' => 'required|string',
+            'offers.*.description' => 'required|string',
+            'offers.*.price' => 'required|integer',
+            'offers.*.priceValidUntil' => 'required|date',
 
             'comment' => 'nullable|string',
         ];

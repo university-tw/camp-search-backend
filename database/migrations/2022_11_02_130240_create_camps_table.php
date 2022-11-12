@@ -23,7 +23,6 @@ return new class extends Migration
             $table->date('start');
             $table->date('end');
             $table->date('apply_end');
-            $table->integer('price');
             $table->string('url')->nullable();
 
             $table->integer('status')->default(0);
