@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 
 class NewCampController extends Controller {
     public function create(CampRequest $request) {
-        return $request->user()->camps()->create($request->all());
+        /** @var Camp $camp */
+        $camp = $request->user()->camps()->create($request->all());
+        $camp->offers()->createMany($request->input('offers'));
+        return $camp;
     }
 
     public function index() {

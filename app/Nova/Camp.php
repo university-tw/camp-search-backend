@@ -5,6 +5,7 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
@@ -79,6 +80,7 @@ class Camp extends Resource {
             Textarea::make('審核意見', 'comment')
                 ->hideFromIndex(),
 
+            HasMany::make('方案', 'offers', Offer::class),
             BelongsTo::make('建立者', 'owner', User::class),
         ];
     }

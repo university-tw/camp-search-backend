@@ -10,6 +10,10 @@ use Illuminate\Support\Carbon;
 class Camp extends Model {
     use HasFactory;
 
+    protected $with = [
+        'offers'
+    ];
+
     protected $fillable = [
         'name',
         'school',

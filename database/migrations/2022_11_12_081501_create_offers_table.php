@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('name');
             $table->integer('price');
             $table->text('description');
-            $table->dateTime('price_valid_until')->nullable();
+            $table->dateTime('priceValidUntil')->nullable();
 
             $table->timestamps();
         });

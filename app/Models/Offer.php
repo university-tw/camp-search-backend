@@ -10,6 +10,17 @@ class Offer extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'price',
+        'name',
+        'description',
+        'priceValidUntil',
+    ];
+
+    protected $casts = [
+        'priceValidUntil' => 'datetime',
+    ];
+
     public function camp(): BelongsTo {
         return $this->belongsTo(Camp::class);
     }
