@@ -6,6 +6,7 @@ use App\Models\Camp;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
 
 class CampSeeder extends Seeder {
     /**
@@ -53,6 +54,33 @@ class CampSeeder extends Seeder {
                 'description' => '',
                 'price' => $item->price,
             ]);
+        }
+        foreach (array_reverse(json_decode(file_get_contents(resource_path('data-1120.json')))) as $item) {
+            $sys = User::find(1);
+
+            $camp = $sys->camps()->create([
+                'name' => $item->name,
+                'school' => $item->school,
+                'department' => $item->department,
+                'start' => $item->start,
+                'end' => $item->end ?? $item->start,
+                'apply_end' => $item->apply_end ?? Carbon::now()->addYear(),
+                'url' => $item->url,
+                'status' => 1
+            ]);
+            foreach ($item->offers as $offer) {
+                $camp->offers()->create([
+                    'name' => $offer->name,
+                    'description' => $offer->name,
+                    'price' => $offer->price,
+                ]);
+            }
+            foreach ($item->tags as $tag) {
+                $camp->tags = [
+                    ...($camp->tags ?? []),
+                    $tag
+                ];
+            }
         }
     }
 }
