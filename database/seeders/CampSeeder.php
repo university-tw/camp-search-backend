@@ -81,6 +81,7 @@ class CampSeeder extends Seeder {
                     $tag
                 ];
             }
+            $camp->save();
         }
     }
 }
