@@ -57,4 +57,8 @@ class Camp extends Model {
     public function offers(): HasMany {
         return $this->hasMany(Offer::class);
     }
+
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
 }

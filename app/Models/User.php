@@ -54,4 +54,8 @@ class User extends Authenticatable
     public function favoriteCamps(): BelongsToMany {
         return $this->belongsToMany(Camp::class, 'user_favorite_camps');
     }
+
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
 }
