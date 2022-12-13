@@ -8,6 +8,23 @@
         "apply_end": "2022-12-31",
         "price": 4000,
         "url": "https://fencing.camp.university.tw",
+        "tags": [
+            "遊憩與運動學群"
+        ],
+        "offers": [
+            {
+                "name": "早鳥報名",
+                "price": 4000
+            },
+            {
+                "name": "團報",
+                "price": 3600
+            },
+            {
+                "name": "一般",
+                "price": 4799
+            }
+        ],
         "priority": 101,
         "recommend": true
     },
@@ -20,6 +37,28 @@
         "apply_end": "2022-12-31",
         "price": 3000,
         "url": "https://web.camp.university.tw",
+        "tags": [
+            "資訊學群",
+            "程式語言"
+        ],
+        "offers": [
+            {
+                "name": "限量優惠",
+                "price": 3000
+            },
+            {
+                "name": "早鳥報名",
+                "price": 5000
+            },
+            {
+                "name": "團報",
+                "price": 4000
+            },
+            {
+                "name": "一般",
+                "price": 7500
+            }
+        ],
         "priority": 101,
         "recommend": true
     },
@@ -32,6 +71,28 @@
         "apply_end": "2022-12-31",
         "price": 3999,
         "url": "https://python.camp.university.tw",
+        "tags": [
+            "資訊學群",
+            "程式語言"
+        ],
+        "offers": [
+            {
+                "name": "清寒專案",
+                "price": 600
+            },
+            {
+                "name": "早鳥報名",
+                "price": 3999
+            },
+            {
+                "name": "團報",
+                "price": 4500
+            },
+            {
+                "name": "一般",
+                "price": 8000
+            }
+        ],
         "priority": 101,
         "recommend": true
     }
