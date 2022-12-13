@@ -1,0 +1,38 @@
+[
+    {
+        "name": "2023 擊劍體驗營",
+        "school": "University.tw",
+        "department": "營隊籌辦團隊",
+        "start": "2022-01-30",
+        "end": "2022-02-01",
+        "apply_end": "2022-12-31",
+        "price": 4000,
+        "url": "https://fencing.camp.university.tw",
+        "priority": 101,
+        "recommend": true
+    },
+    {
+        "name": "2023 Web開發挑戰營",
+        "school": "University.tw",
+        "department": "營隊籌辦團隊",
+        "start": "2022-02-04",
+        "end": "2022-02-06",
+        "apply_end": "2022-12-31",
+        "price": 3000,
+        "url": "https://web.camp.university.tw",
+        "priority": 101,
+        "recommend": true
+    },
+    {
+        "name": "2023 Python實作營",
+        "school": "University.tw",
+        "department": "營隊籌辦團隊",
+        "start": "2022-02-06",
+        "end": "2022-02-08",
+        "apply_end": "2022-12-31",
+        "price": 3999,
+        "url": "https://python.camp.university.tw",
+        "priority": 101,
+        "recommend": true
+    }
+]
