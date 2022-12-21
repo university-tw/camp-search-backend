@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\Filters\CampStatusType;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
@@ -102,7 +103,9 @@ class Camp extends Resource {
      * @return array
      */
     public function filters(NovaRequest $request) {
-        return [];
+        return [
+            CampStatusType::make()
+        ];
     }
 
     /**
