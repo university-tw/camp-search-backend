@@ -6,6 +6,7 @@ use App\Nova\Filters\CampStatusType;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
@@ -55,7 +56,18 @@ class Camp extends Resource {
             ID::make()->sortable(),
             Text::make('營隊', 'name'),
 
-            Number::make('順序', 'priority')->min(0)->max(100)->step(1),
+            Textarea::make('簡介', 'description'),
+            Text::make('學校', 'school'),
+            Text::make('系所', 'department'),
+            Text::make('網址', 'url'),
+
+            DateTime::make('開始時間', 'start'),
+            DateTime::make('結束時間', 'end'),
+            DateTime::make('報名截止時間', 'apply_end'),
+            Text::make('報名注意事項', 'apply_notice'),
+            Number::make('價格', 'price'),
+
+            Number::make('順序', 'priority')->min(0)->max(100)->step(1)->default(0),
             Boolean::make('推薦', 'recommend'),
             Items::make('標籤', 'tags'),
 
