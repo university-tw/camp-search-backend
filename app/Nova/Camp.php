@@ -65,7 +65,6 @@ class Camp extends Resource {
             DateTime::make('結束時間', 'end'),
             DateTime::make('報名截止時間', 'apply_end'),
             Text::make('報名注意事項', 'apply_notice'),
-            Number::make('價格', 'price'),
 
             Number::make('順序', 'priority')->min(0)->max(100)->step(1)->default(0),
             Boolean::make('推薦', 'recommend'),
